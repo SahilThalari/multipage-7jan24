@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Multi Pages...</title>
+		<style>
+			* {font-size:40px;}
+			body {background-color:skyblue;}
+			.nav {background-color:black; border-radius:8px;}
+			.nav a {width:40%; margin:10%; color:white;text-decoration:none;}
+			.nav a:hover {color:red;}
+		</style>
+		<script>
+					function find()
+					{
+						event.preventDefault();
+						let num = document.getElementById("num");
+						let  msg = document.getElementById("msg");
+						let n = parseInt(num.value);
+						
+						if (n % 2 == 0)
+								msg.innerHTML = "even1";
+						else
+								msg.innerHTML = "odd1";
+					}
+						
+		</script>
+	</head>
+	
+	<body>
+	<center>
+		<div class="nav">
+			<a href="index.html">Home</a>
+			<a href="about.html">About</a>
+		</div>
+		<h1>Even Odd Finder..</h1>
+		<form onsubmit="find()">
+			<input type="number" id="num" placeholder="Enter a number"/>
+			<br><br>
+			<input type="submit" value="Find Even Odd"/>
+		</form>
+		<h2 id="msg"></h2>
+	</center>
+	</body>
+</html>
